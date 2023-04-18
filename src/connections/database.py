@@ -7,6 +7,5 @@ engine = create_engine('postgresql://ao:ao@localhost:5432/ao')
 Session = sessionmaker(engine)
 
 
-
 def create_tables():
     Base.metadata.create_all(engine)
