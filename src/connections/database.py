@@ -3,7 +3,16 @@ from sqlalchemy.orm import sessionmaker
 
 from src.models.base import Base
 
-engine = create_engine('postgresql://ao:ao@localhost:5432/ao')
+username = 'postgres'
+password = 'rDUTTaeFPN1JZ3XxSqUH'
+host = 'containers-us-west-111.railway.app'
+port = '6875'
+database = 'railway'
+
+url = f'postgresql://{username}:{password}@{host}:{port}/{database}'
+
+engine = create_engine(url)
+
 Session = sessionmaker(engine)
 
 

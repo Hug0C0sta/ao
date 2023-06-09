@@ -21,6 +21,5 @@ class Order(Base):
     is_happy_customer = Column(Boolean)
     delivery_charges = Column(Numeric(10, 2))
 
-    # fk_shopping_cart = Column(UUID, ForeignKey('shopping_cart.id'),  default=uuid.uuid4)
     fk_customer = Column(UUID, ForeignKey('customer.id'), default=uuid.uuid4)
     fk_opinion = Column(UUID, ForeignKey('opinion.id'), default=uuid.uuid4)
